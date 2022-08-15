@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<title>Decodificador - Alura Challenge</title>
+</head>
+<body>
+
+	<h1 class="img-principal"><img src="img/vector.png"></h1>
+
+	
+		<form>
+			<input type="text" class="input-principal"  placeholder="Digite sua Mensagem"></input>
+			
+			<p class="requisito">&#9888 Digite apenas letras minusculas e sem acentuação.</p>
+			<div class="buttons">
+				<button type="button" id="criptografia">Criptografia</button>
+				<button type="button" id="descriptografia">Descriptografia</button>
+			</div>
+		</form>
+
+	<div class="bloco-resultante">
+		<div class="bloco-resultante-conteudo-resultado">
+			<textarea class="texto-resultado" readonly></textarea>
+			<button id="copiar">Copiar</button>
+		</div>
+		<div class="bloco-resultante-conteudo-original">
+			<img src="img/sem_texto.jpg" height="336" width="304" class="img-resultado">
+			<h2>Nenhuma mensagem encontrada</h2>
+			<p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+		</div>
+	</div>
+
+
+	<footer class="footer">
+		<p class="copyright">&copy; Copyright Gabriel Fernandes - 2022</p>
+	</footer>
+
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
