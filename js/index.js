@@ -12,29 +12,39 @@ let conteudoFinal = document.querySelector('.bloco-resultante-conteudo-resultado
 
 function criptografar (texto) {
 
+	const matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
+	texto = texto.toLowerCase();
 
-	let resultado = texto
-		.replaceAll('e', 'enter')
-		.replaceAll('i', 'imes')
-		.replaceAll('a', 'ai')
-		.replaceAll('o', 'ober')
-		.replaceAll('u', 'ufat')
+	for (let i = 0; i < matrizCodigo.length; i++) {
+		if(texto.includes(matrizCodigo[i][0])) {
 
-		return resultado;
+			texto = texto.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+
+		}
+
+	}
 	
-
+	return texto;
 }
 
 function descriptografar (texto) {
 
-	let resultado = texto
-		.replaceAll('enter', 'e')
-		.replaceAll('imes', 'i')
-		.replaceAll('ai', 'a')
-		.replaceAll('ober', 'o')
-		.replaceAll('ufat', 'u')
+	const matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
 
-		return resultado
+	texto = texto.toLowerCase();
+
+	for(let i = 0; i < matrizCodigo.length; i++) {
+
+		if(texto.includes(matrizCodigo[i][1])) {
+
+			texto = texto.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
+
+		}
+
+	}
+
+		return texto
+		
 }
 
 function copiar() {
